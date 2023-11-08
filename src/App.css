@@ -1,0 +1,144 @@
+#root {
+  /* margin: 0 auto; */
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+body {
+  background: #111;
+  color: #411;
+  font-family: Consolas, Courier, monospace;
+  text-shadow: 0 0 15px #411;
+  height: 100vh;
+  margin: 0;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+div {
+  position: relative;
+  margin: -30px auto;
+  text-align: center;
+}
+
+.glow {
+  color: #f00;
+  text-shadow: 0px 0px 10px #f00;
+}
+
+span {
+  display: inline-block;
+  padding: 0 10px;
+}
+#loading{
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.letter {
+  font-size: 60px; /* default font size */
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .letter {
+      font-size: 50px;
+  }
+}
+
+/* For screens smaller than 400px */
+@media (max-width: 400px) {
+  .letter {
+      font-size: 50px;
+  }
+}
+.matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.matrix span {
+  position: absolute;
+  top: 0;
+  color: lime;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 10px lime;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -50px; }
+  100% { top: 100vh; }
+}
+@keyframes fall-letter {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+#loading span#\30{
+  animation: fall-letter 2s linear forwards;
+  animation-delay: 4.5s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\31{
+  animation: fall-letter 2s linear forwards; 
+  animation-delay: 5s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\32{
+  animation: fall-letter 2s linear forwards;
+  animation-delay: 4.2s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\33{
+  animation: fall-letter 2s linear forwards;
+  animation-delay: 6s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\34{
+  animation: fall-letter 2s linear forwards;
+  animation-delay: 4s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\35{
+  animation: fall-letter 2s linear forwards;
+  animation-delay: 5.5s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\36{
+  animation: fall-letter 2s linear forwards;
+  animation-delay: 4.8s; /* delay the start of the animation by 4 seconds */
+}
