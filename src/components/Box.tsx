@@ -1,20 +1,17 @@
-import React, { CSSProperties, ReactNode } from "react";
-import { entire } from '../styles/styles';
+import  { CSSProperties, ReactNode } from "react";
+import { box } from '../styles/styles';
 
 interface BoxProps {
   children: ReactNode;
   style?: CSSProperties;
 }
 
-// commong style for padding and margins
-// every component should start with a box like this
-
-const Box: React.FC<BoxProps> = ({ children, style }) => {
+const Box = ({ children, style }: BoxProps) => {
   return (
-    <>
-      <div style={entire}>{children}</div>
-    </>
+    <div style={{ ...box, ...style }}>
+      {children}
+    </div>
   );
-};
-
+}
 export default Box;
+// every component should start with a box like this

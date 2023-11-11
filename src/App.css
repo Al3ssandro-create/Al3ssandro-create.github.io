@@ -1,6 +1,4 @@
 #root {
-  /* margin: 0 auto; */
-  padding: 2rem;
   text-align: center;
 }
 
@@ -35,25 +33,19 @@ body {
   background: #111;
   color: #411;
   font-family: Consolas, Courier, monospace;
-  text-shadow: 0 0 15px #411;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 .center{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  max-height: 100vh;
 }
-div {
-  position: relative;
-  margin: -30px auto;
+.divstyled {
+  height: 100vh;
+  margin: auto;
   text-align: center;
-}
-
-.glow {
-  color: #f00;
-  text-shadow: 0px 0px 10px #f00;
 }
 
 span {
@@ -69,28 +61,38 @@ span {
 }
 
 .letter {
-  font-size: 60px; /* default font size */
+  font-size: 60px;
+  color: #411; /* default font size */
 }
+.glow {
+  color: #f00;
+  text-shadow: 0px 0px 10px #f00;
+}
+.glow-light{
+  color:#747bff;
+  /* text-shadow: 0px 0px 3px #747bff; */
+}
+
 
 /* For screens smaller than 600px */
 @media (max-width: 600px) {
   .letter {
-      font-size: 50px;
+      font-size: 40px;
   }
 }
 
 /* For screens smaller than 400px */
 @media (max-width: 400px) {
   .letter {
-      font-size: 50px;
+      font-size: 40px;
   }
 }
 .matrix {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   background-color: #111;
 }
@@ -113,32 +115,61 @@ span {
   0% { transform: translateY(0); }
   100% { transform: translateY(100vh); }
 }
+@keyframes fall-arrow {
+  0% { transform: translateY(-10px); }
+  50% {  transform: translateY(10px); }
+  100% {  transform: translateY(-10px); }
+}
 
 #loading span#\30{
-  animation: fall-letter 2s linear forwards;
-  animation-delay: 4.5s; /* delay the start of the animation by 4 seconds */
-}
-#loading span#\31{
-  animation: fall-letter 2s linear forwards; 
-  animation-delay: 5s; /* delay the start of the animation by 4 seconds */
-}
-#loading span#\32{
-  animation: fall-letter 2s linear forwards;
-  animation-delay: 4.2s; /* delay the start of the animation by 4 seconds */
-}
-#loading span#\33{
-  animation: fall-letter 2s linear forwards;
-  animation-delay: 6s; /* delay the start of the animation by 4 seconds */
-}
-#loading span#\34{
-  animation: fall-letter 2s linear forwards;
+  animation: fall-letter 1.5s linear forwards;
   animation-delay: 4s; /* delay the start of the animation by 4 seconds */
 }
+#loading span#\31{
+  animation: fall-letter 1.5s linear forwards; 
+  animation-delay: 4.5s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\32{
+  animation: fall-letter 1.5s linear forwards;
+  animation-delay: 3.7s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\33{
+  animation: fall-letter 1.5s linear forwards;
+  animation-delay: 5.2s; /* delay the start of the animation by 4 seconds */
+}
+#loading span#\34{
+  animation: fall-letter 1.5s linear forwards;
+  animation-delay: 3.5s; /* delay the start of the animation by 4 seconds */
+}
 #loading span#\35{
-  animation: fall-letter 2s linear forwards;
-  animation-delay: 5.5s; /* delay the start of the animation by 4 seconds */
+  animation: fall-letter 1.5s linear forwards;
+  animation-delay: 5.0s; /* delay the start of the animation by 4 seconds */
 }
 #loading span#\36{
-  animation: fall-letter 2s linear forwards;
-  animation-delay: 4.8s; /* delay the start of the animation by 4 seconds */
+  animation: fall-letter 1.5s linear forwards;
+  animation-delay: 4.3s; /* delay the start of the animation by 4 seconds */
+}
+.pi-angle-double-down{
+  animation: fall-arrow 1.5s linear infinite;
+  font-size: 20px;
+  position: absolute;
+  bottom: 30px;
+}
+.pi-angle-double-down:hover{
+  cursor: pointer;
+}
+p{
+  padding:5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.strict{
+  width: min-content;
+}
+/* styles.css */
+.languages-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

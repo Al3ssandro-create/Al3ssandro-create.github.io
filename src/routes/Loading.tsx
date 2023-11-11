@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import  Letter  from '../components/Letter';
@@ -19,7 +18,7 @@ function Loading() {
                 // remove the span after the animation is over to prevent div from getting too large
                 setTimeout(() => {
                     if(matrix?.children)matrix?.removeChild(span);
-                }, 4000);
+                }, 1500);
     
             };
             const intervalId = setInterval(makeMatrix, 1); // create a new number every 100ms
@@ -27,15 +26,15 @@ function Loading() {
                 clearInterval(intervalId);
                 setTimeout(() => {
                     navigate('/home');
-                }, 4000);
+                }, 2500);
             }, 500);
-        }, 4000);
+        }, 3000);
         return () => clearTimeout(timer);
     },[]);
     return (
         <>
-            <div className='center'>
-                <div className="matrix"></div>
+            <div className='center divstyled'>
+                <div className="matrix divstyled"></div>
                 <div id="loading">
                     {"LOADING".split('').map((_, index) => (
                         <Letter key={index} letterIndex={index} />

@@ -1,8 +1,19 @@
+/*eslint-disable*/
+const {nextui} = require("@nextui-org/react");
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}",     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",],
+
+export default {
+  content: ["./index.html", "./src/**/*.{html,js}","./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    "neon":{
+      extend: "dark",
+        colors: {
+          primary : {
+            red: "#f00",
+
+        },
+      },
+    }
   },
   darkMode: "class",
   plugins: [nextui()],

@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-const Letter = ({ letterIndex }) => {
+import { useEffect, useState } from 'react';
+
+
+function Letter({ letterIndex }:{ letterIndex: number}){
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split('');
     const targetWord = "LOADING";
     const [letter, setLetter] = useState(' ');
     const correctLetter = targetWord[letterIndex];
     const [animate, setAnimate] = useState(false);
-
+    
     useEffect(() => {
-        let writeTimeout;
+        let writeTimeout: number | undefined;
 
         // If the animation has started for this letter, begin the random letter display
         const write = () => {
@@ -24,11 +26,11 @@ const Letter = ({ letterIndex }) => {
         }
 
         return () => clearTimeout(writeTimeout);
-    }, [animate, correctLetter]);
+    }, [animate, correctLetter, alphabet]);
 
     // Trigger the random letter animation after a delay based on the letter's index
     useEffect(() => {
-        const delay = (letterIndex + 1) * 500;
+        const delay = (letterIndex + 1) * 300;
         const timer = setTimeout(() => {
             setAnimate(true);
         }, delay);
@@ -37,7 +39,7 @@ const Letter = ({ letterIndex }) => {
     }, [letterIndex]);
 
     return (
-        <span id={letterIndex} className={`letter ${letter === correctLetter ? 'glow' : ''}`}>{letter}</span>
+        <span id={letterIndex.toString()} className={`letter ${letter === correctLetter ? 'glow' : ''}`}>{letter}</span>
     );
-};
+}
 export default Letter;
