@@ -25,7 +25,7 @@ function Loading() {
             setTimeout(() => {
                 clearInterval(intervalId);
                 setTimeout(() => {
-                    navigate('/home');
+                    navigate('/private');
                 }, 2500);
             }, 500);
         }, 3000);

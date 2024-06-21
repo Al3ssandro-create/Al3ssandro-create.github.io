@@ -15,7 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+.changeColor{
+  background-color: #3F3F46;
+}
 a {
   font-weight: 1000;
   text-decoration: inherit;

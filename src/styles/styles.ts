@@ -16,7 +16,7 @@ export const container: CSSProperties = {
     textAlign: "center",
     width: "100%",
     display:"grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr ))",
     columnGap: "2rem",
     rowGap: "2rem",
     padding: "2rem",

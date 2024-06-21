@@ -8,4 +8,5 @@ export type GithubRepo = {
     description: string;
     html_url: string;
     languages_url:string;
+    language: string;
 };

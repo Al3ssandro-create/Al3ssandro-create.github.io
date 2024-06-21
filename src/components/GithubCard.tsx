@@ -16,7 +16,7 @@ function GithubCard({
 }) {
   const { theme } = useTheme();
 
-  const cardStyle = theme === 'light' ? { backgroundColor: 'lightgrey' } : {};
+  const cardStyle = theme === 'light' ? { backgroundColor: '#E7E7E7' } : {};
   const glowClass = theme === "dark" ? "glow" : "glow-light";
   return (
     <Card
